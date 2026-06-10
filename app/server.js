@@ -1,17 +1,13 @@
 import express from "express";
 import config from "./config/enviroments/index.js";
-import { Router } from "express";
+import ruta from "./routes/index.js";
 
 //INICIALIZAR
 const app = express();
-const router = Router();
 
 app.set("port", config.PORT)
+app.use(express.json());
 
-router.get("/",(req, res)=>{
-    res.send("hola mundo");
-})
-
-app.use(router);
+app.use(ruta);
 
 export default app;

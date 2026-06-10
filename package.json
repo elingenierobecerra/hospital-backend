@@ -4,14 +4,17 @@
   "description": "aplicacion de hospital",
   "license": "ISC",
   "author": "elingenierobecerra",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_ENV=developer& node index.js",
+    "dev": "set NODE_ENV=developer& nodemon index.js",
+    "pat": "set NODE_ENV=developer& node --watch index.js",
     "start": "set NODE_ENV=production& node index.js"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mysql2": "^3.22.5",
+    "nodemon": "^3.1.14"
   }
 }
